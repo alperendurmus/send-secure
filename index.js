@@ -17,6 +17,26 @@ function isPrivateIP(ip) {
 	return false;
 }
 
+const MESSAGE = {
+	RECEIVER: {
+		CONNECTED: 10,
+		CONNECTION_REQUEST: 11,
+		ANSWER: 12,
+	},
+	SENDER: {
+		CONNECTED: 20,
+		CONNECTION_ACCEPTED: 21,
+		CONNECTION_REJECTED: 22,
+		OFFER: 23,
+		CANDIDATE: 24,
+	},
+	ERROR: {
+		SENDER_ALREADY_EXISTS: 30,
+		RECEIVER_ALREADY_EXISTS: 31,
+	}
+}
+
 module.exports = {
-	isPrivateIP
+	isPrivateIP,
+	MESSAGE
 };
