@@ -19,20 +19,20 @@ const isPrivateIP = (ip) => {
 
 const MESSAGE = {
 	RECEIVER: {
-		CONNECTED: 10,
-		CONNECTION_REQUEST: 11,
-		ANSWER: 12,
+		CONNECTED: 'receiver-connected',
+		CONNECTION_REQUEST: 'receiver-connection-request',
+		ANSWER: 'receiver-answer',
 	},
 	SENDER: {
-		CONNECTED: 20,
-		CONNECTION_ACCEPTED: 21,
-		CONNECTION_REJECTED: 22,
-		OFFER: 23,
-		CANDIDATE: 24,
+		CONNECTED: 'sender-connected',
+		CONNECTION_ACCEPTED: 'sender-connection-accepted',
+		CONNECTION_REJECTED: 'sender-connection-rejected',
+		OFFER: 'sender-offer',
+		CANDIDATE: 'sender-candidate',
 	},
 	ERROR: {
-		SENDER_ALREADY_EXISTS: 30,
-		RECEIVER_ALREADY_EXISTS: 31,
+		SENDER_ALREADY_EXISTS: 'error-sender-already-exists',
+		RECEIVER_ALREADY_EXISTS: 'error-receiver-already-exists',
 	}
 }
 
