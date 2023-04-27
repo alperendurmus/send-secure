@@ -1,4 +1,4 @@
-function isPrivateIP(ip) {
+const isPrivateIP = (ip) => {
 	const octets = ip.split(':').pop().split('.').map(Number);
 	if (octets.length === 4) {
 		if (octets[0] === 10) {
