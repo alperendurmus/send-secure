@@ -18,6 +18,7 @@ const isPrivateIP = (ip) => {
 }
 
 const MESSAGE = {
+	DEFAULT: 'default', // Common message type
 	RECEIVER: {
 		CONNECTED: 'receiver-connected',
 		CONNECTION_REQUEST: 'receiver-connection-request',
