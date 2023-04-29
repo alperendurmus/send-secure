@@ -37,7 +37,12 @@ const MESSAGE = {
 	}
 }
 
+const env = {
+	SIGNALING_SERVER: 'http://send-secure-signaling.alme.pro',
+}
+
 module.exports = {
 	isPrivateIP,
-	MESSAGE
+	MESSAGE,
+	env
 };
