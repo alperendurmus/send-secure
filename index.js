@@ -38,7 +38,10 @@ const MESSAGE = {
 }
 
 const env = {
-	SIGNALING_SERVER: 'http://send-secure-signaling.alme.pro',
+	SIGNALING_SERVER: {
+		dev: 'http://localhost:3001',
+		prod: 'http://send-secure-signaling.alme.pro',
+	}
 }
 
 module.exports = {
