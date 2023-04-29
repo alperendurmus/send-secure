@@ -17,6 +17,16 @@ const isPrivateIP = (ip) => {
 	return false;
 }
 
+const isLocal = (host = '') => {
+	const hostname = host || window?.location?.hostname;
+	return hostname === "localhost" ||
+		hostname === "127.0.0.1" ||
+		hostname === " [::1]" ||
+		hostname.startsWith("192.168.") ||
+		hostname.startsWith("10.") ||
+		hostname.endsWith(".local");
+}
+
 const MESSAGE = {
 	DEFAULT: 'default', // Common message type
 	RECEIVER: {
@@ -38,14 +48,12 @@ const MESSAGE = {
 }
 
 const env = {
-	SIGNALING_SERVER: {
-		dev: 'http://localhost:3001',
-		prod: 'http://send-secure-signaling.alme.pro',
-	}
+	SIGNALING_SERVER: isLocal() ? 'http://localhost:3001' : 'http://send-secure-signaling.alme.pro'
 }
 
 module.exports = {
 	isPrivateIP,
 	MESSAGE,
-	env
+	env,
+	isLocal
 };
