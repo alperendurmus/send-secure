@@ -46,6 +46,7 @@ const MESSAGE = {
 	ERROR: {
 		SENDER_ALREADY_EXISTS: 'error-sender-already-exists',
 		RECEIVER_ALREADY_EXISTS: 'error-receiver-already-exists',
+		INVALID_UUID: 'error-invalid-uuid',
 	}
 }
 
