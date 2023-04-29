@@ -18,6 +18,8 @@ const isPrivateIP = (ip) => {
 }
 
 const isLocal = (host = '') => {
+	if (typeof window === 'undefined') return false;
+
 	const hostname = host || window?.location?.hostname;
 	return hostname === "localhost" ||
 		hostname === "127.0.0.1" ||
