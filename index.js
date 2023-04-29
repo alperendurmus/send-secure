@@ -48,7 +48,7 @@ const MESSAGE = {
 }
 
 const env = {
-	SIGNALING_SERVER: isLocal() ? 'http://localhost:3001' : 'http://send-secure-signaling.alme.pro'
+	SIGNALING_SERVER: isLocal() ? 'localhost:3001' : 'send-secure-signaling.alme.pro'
 }
 
 module.exports = {
