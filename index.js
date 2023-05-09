@@ -35,6 +35,7 @@ const MESSAGE = {
 		CONNECTED: 'receiver-connected',
 		CONNECTION_REQUEST: 'receiver-connection-request',
 		ANSWER: 'receiver-answer',
+		CANDIDATE: 'receiver-candidate',
 	},
 	SENDER: {
 		CONNECTED: 'sender-connected',
