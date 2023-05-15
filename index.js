@@ -52,7 +52,8 @@ const MESSAGE = {
 }
 
 const env = {
-	SIGNALING_SERVER: isLocal() ? 'localhost:3001' : 'send-secure-signaling.alme.pro'
+	SIGNALING_SERVER: isLocal() ? 'localhost:3001' : 'send-secure-signaling.alme.pro',
+	WEB_CLIENT: isLocal() ? 'localhost:3000' : 'alperendurmus.github.io/send-secure-react',
 }
 
 const hasRTCPeerConnection = () => {
