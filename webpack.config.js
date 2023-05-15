@@ -7,5 +7,24 @@ module.exports = {
 		filename: 'send-secure.min.js',
 		library: 'sendSecure',
 	},
-	mode: 'production'
+	mode: 'production',
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [
+							['@babel/preset-env', { targets: { esmodules: true } }]
+						],
+						plugins: [
+							// Add any additional Babel plugins here
+						]
+					}
+				}
+			}
+		]
+	}
 };
